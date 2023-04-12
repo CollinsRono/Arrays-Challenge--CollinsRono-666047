@@ -1,0 +1,54 @@
+Array challenge:
+1.	Select array elements starting with letter B.
+2.	Reverse the order of array elements.
+3.	Sort the elements of an array in ascending order.
+
+CODE:
+class Arrays{
+    public static void main(String [] args){
+String [] orderIds= {"A652", "B845", "A365", "B257", "A245", "B486", "A931"};
+int [] sortReverse={587, 258, 369, 554, 478, 692, 156, 757};
+
+        System.out.println("Elements Starting With B:");
+    for(String i: orderIds)
+        if(i.startsWith("B")){
+            System.out.println(i);
+            }
+            System.out.println("  ");
+
+        System.out.println("Reversing An Array:");
+    for(int i=sortReverse.length-1;i>=0;i--)
+        System.out.print(sortReverse[i] +", ");
+        System.out.println("  ");
+
+        int temp;
+        System.out.println("Sorting An Array:");
+    for(int i=0; i<sortReverse.length;i++){
+        for(int j=i;j<sortReverse.length;j++){
+            if(sortReverse[i]>sortReverse[j]){
+                temp=sortReverse[i];
+                sortReverse[i]=sortReverse[j];
+                sortReverse[j]=temp;
+            }
+        }
+    }
+    for(int a:sortReverse){
+        System.out.print(a + ", ");
+    }
+    
+}
+}
+
+
+
+OUTPUT:
+Elements Starting With B:
+B845
+B257
+B486
+
+Reversing An Array:
+757, 156, 692, 478, 554, 369, 258, 587,
+Sorting An Array:
+156, 258, 369, 478, 554, 587, 692, 757,
+PS C:\Users\user\Documents\JAVA>
